@@ -80,13 +80,15 @@ export default function Home() {
       audio.play().then(() => setIsPlaying(true)).catch(() => setIsPlaying(false));
     }
   };
+  const basePath = process.env.NODE_ENV === "production" ? "/wedding-invitation" : "";
+
   return (
     <div className="min-h-screen overflow-x-hidden bg-gradient-to-b from-rose-50 via-white to-amber-50 text-slate-950">
       <ScrollHint />
 
       <audio
         ref={audioRef}
-        src="/music/idea.mp3"
+        src={`${basePath}/music/idea.mp3`}
         autoPlay
         loop
       />
