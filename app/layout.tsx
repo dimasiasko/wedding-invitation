@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     url: "https://dimasiasko.github.io/wedding-invitation",
     images: [
       {
-        url: "/wedding-invitation/opengraph.jpg",
+        url: "/wedding-invitation/opengraph.png",
         width: 1200,
         height: 630,
         alt: 'Wedding Invitation',
