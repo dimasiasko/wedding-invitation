@@ -42,6 +42,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Дмитро та Ірина | Wedding Invitation',
     description: 'Запрошуємо вас розділити з нами наш особливий день - день нашого весілля.',
+    url: "https://dimasiasko.github.io/wedding-invitation",
     images: [
       {
         url: '/opengraph.jpg',
