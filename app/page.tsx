@@ -33,19 +33,6 @@ const carouselPhotos = [
   },
 ];
 
-function formatUnit(value: number) {
-  return String(value).padStart(2, "0");
-}
-
-function getTimeLabel(ms: number) {
-  const seconds = Math.floor(Math.abs(ms) / 1000);
-  const days = Math.floor(seconds / 86400);
-  const hours = Math.floor((seconds % 86400) / 3600);
-  const minutes = Math.floor((seconds % 3600) / 60);
-  const remainingSeconds = seconds % 60;
-  return `${days}d ${formatUnit(hours)}h ${formatUnit(minutes)}m ${formatUnit(remainingSeconds)}s`;
-}
-
 export default function Home() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const heroRef = useRef<HTMLElement | null>(null);
@@ -63,7 +50,10 @@ export default function Home() {
     if (playPromise !== undefined) {
       playPromise
         .then(() => setIsPlaying(true))
-        .catch(() => setIsPlaying(false));
+        .catch((e) => {
+          console.error("Error playing audio:", e);
+          setIsPlaying(false);
+        });
     }
   }, []);
 
