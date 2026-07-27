@@ -337,10 +337,10 @@ export default function Home() {
                 {[...Array(8)].map((_, dup) => (
                   <div key={dup} className="flex items-center gap-8 flex-shrink-0">
                     {[
-                      "/assets/flowers-1.webp",
-                      "/assets/flowers-2.png",
-                      "/assets/flowers-3.png",
-                      "/assets/flowers-4.webp",
+                      `${basePath}/assets/flowers-1.webp`,
+                      `${basePath}/assets/flowers-2.png`,
+                      `${basePath}/assets/flowers-3.png`,
+                      `${basePath}/assets/flowers-4.webp`,
                     ].map((src, i) => (
                       <img
                         key={`${dup}-${i}`}
