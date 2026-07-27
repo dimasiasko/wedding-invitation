@@ -37,6 +37,7 @@ const laluxes = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://dimasiasko.github.io"),
   title: "Дмитро та Ірина | Wedding Invitation",
   description: "Запрошуємо вас розділити з нами наш особливий день - день нашого весілля. Для нас дуже важливо, щоб поруч були люди, які займають особливе місце в нашому серці.",
   openGraph: {
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
     url: "https://dimasiasko.github.io/wedding-invitation",
     images: [
       {
-        url: '/opengraph.jpg',
+        url: "/wedding-invitation/opengraph.jpg",
         width: 1200,
         height: 630,
         alt: 'Wedding Invitation',
