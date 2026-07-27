@@ -10,7 +10,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: '/wedding-invitation',
+  basePath: '/wedding-invitation/',
+  assetPrefix: "/wedding-invitation/",
 };
 
 export default nextConfig;
