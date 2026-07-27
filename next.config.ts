@@ -5,7 +5,12 @@ const nextConfig: NextConfig = {
     'http://localhost:3000',
     '192.168.0.102',
     'fredricka-unpetrifying-oilily.ngrok-free.dev'
-  ]
+  ],
+  output: 'export',
+  images: {
+    unoptimized: true,
+  },
+  basePath: '/wedding-invitation',
 };
 
 export default nextConfig;
