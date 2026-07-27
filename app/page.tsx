@@ -45,7 +45,7 @@ export default function Home() {
       return;
     }
 
-    audio.volume = 0.65;
+    audio.volume = 0.45;
     const playPromise = audio.play();
     if (playPromise !== undefined) {
       playPromise
