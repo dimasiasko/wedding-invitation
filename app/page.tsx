@@ -259,7 +259,7 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col items-center gap-1" style={{ opacity: 1, transform: "none" }}>
                   <p className="text-sm font-semibold tracking-[0.06em] text-[var(--minimal-title)] max-w-[280px] leading-[1.5]">
-                    Свято-Софіївська парафія ПЦУ
+                    Свято-Софіївська парафія
                   </p>
                   <p className="text-[11px] font-normal tracking-[0.08em] max-w-[260px] leading-[1.6] mt-2">
                     м. Вараш, вул. Перемоги, 51
