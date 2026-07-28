@@ -198,16 +198,17 @@ export default function Home() {
               {carouselPhotos.map((photo) => (
                 <div
                   key={photo.src.src}
-                  className="min-w-[86%] shrink-0 snap-start overflow-hidden rounded-[1.75rem] border border-slate-200 bg-slate-100 shadow-inner shadow-slate-200/40 sm:min-w-[72%] lg:min-w-[56%]"
+                  className="min-w-[86%] shrink-0 snap-start sm:min-w-[72%] lg:min-w-[56%]"
                 >
-                  <Image
-                    src={photo.src}
-                    alt={photo.alt}
-                    className="h-[420px] w-full object-cover"
-                    width={1538}
-                    height={2048}
-                    sizes="(max-width: 640px) 86vw, (max-width: 1024px) 72vw, 56vw"
-                  />
+                  <div className="relative aspect-[3/4] overflow-hidden rounded-[1.75rem] border border-slate-200 bg-slate-100 shadow-inner shadow-slate-200/40">
+                    <Image
+                      src={photo.src}
+                      alt={photo.alt}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width:640px) 86vw, (max-width:1024px) 72vw, 56vw"
+                    />
+                  </div>
                 </div>
               ))}
             </div>
