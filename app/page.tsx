@@ -9,26 +9,31 @@ import { motion } from "motion/react";
 import ScrollHint from "./scroll-hint";
 import Image from "next/image";
 import heroImg from './assets/1.jpg';
+import c1 from './assets/c-1.jpg';
+import c2 from './assets/c-2.jpg';
+import c3 from './assets/c-3.jpg';
+import c4 from './assets/c-4.jpg';
+import c5 from './assets/c-5.jpg';
 
 const carouselPhotos = [
   {
-    src: "./assets/c-1.jpg",
+    src: c1,
     alt: "",
   },
   {
-    src: "./assets/c-2.jpg",
+    src: c2,
     alt: "",
   },
   {
-    src: "./assets/c-3.jpg",
+    src: c3,
     alt: "",
   },
   {
-    src: "./assets/c-4.jpg",
+    src: c4,
     alt: "",
   },
   {
-    src: "./assets/c-5.jpg",
+    src: c5,
     alt: "",
   },
 ];
@@ -183,20 +188,25 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6, ease: 'easeOut' }}
-            className="mt-16 rounded-[2rem] bg-white/95 p-6 shadow-xl shadow-slate-200/60 sm:p-10 ">
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="mt-16 rounded-[2rem] bg-white/95 p-6 shadow-xl shadow-slate-200/60 sm:p-10"
+          >
             <div
               ref={carouselRef}
               className="flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-px-2 pb-6 sm:scroll-px-4 sm:pb-8"
             >
               {carouselPhotos.map((photo) => (
                 <div
-                  key={photo.src}
+                  key={photo.src.src}
                   className="min-w-[86%] shrink-0 snap-start overflow-hidden rounded-[1.75rem] border border-slate-200 bg-slate-100 shadow-inner shadow-slate-200/40 sm:min-w-[72%] lg:min-w-[56%]"
                 >
-                  <img
+                  <Image
                     src={photo.src}
+                    alt={photo.alt}
                     className="h-[420px] w-full object-cover"
+                    width={1538}
+                    height={2048}
+                    sizes="(max-width: 640px) 86vw, (max-width: 1024px) 72vw, 56vw"
                   />
                 </div>
               ))}
